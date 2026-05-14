@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -571,8 +571,7 @@ footer{border-top:2px solid var(--yellow);background:var(--blue-dk);padding:2rem
       <!-- MEGA GENGAR ex 284/217 -->
       <div class="feat-card">
         <div class="feat-top">
-          <div class="feat-img" id="gengar-img-wrap" onclick="openZoom('https://den-cards.pokellector.com/426/Mega-Gengar-ex.ASC.284.59738.png')"
-            <!-- Mega Gengar ex SIR 284/217 — Ascended Heroes -->
+          <div class="feat-img" id="gengar-img-wrap" onclick="openZoom('https://den-cards.pokellector.com/426/Mega-Gengar-ex.ASC.284.59738.png')">
             <img
               id="gengar-img"
               src="https://den-cards.pokellector.com/426/Mega-Gengar-ex.ASC.284.59738.png"
@@ -580,33 +579,9 @@ footer{border-top:2px solid var(--yellow);background:var(--blue-dk);padding:2rem
               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;"
               onerror="gengarImgFallback()">
             <!-- fallback: silhueta SVG do Gengar + texto, oculto por padrão -->
-            <div id="gengar-fallback" style="display:none;position:absolute;inset:0;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(160deg,#1a0a2e 0%,#2d0f4a 100%);gap:.5rem;">
-              <svg width="64" height="64" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- corpo do Gengar: forma arredondada roxa -->
-                <ellipse cx="50" cy="58" rx="38" ry="32" fill="#7c3aed" opacity=".9"/>
-                <!-- cabeça -->
-                <ellipse cx="50" cy="38" rx="30" ry="28" fill="#7c3aed" opacity=".9"/>
-                <!-- olhos -->
-                <ellipse cx="38" cy="32" rx="7" ry="8" fill="white"/>
-                <ellipse cx="62" cy="32" rx="7" ry="8" fill="white"/>
-                <ellipse cx="40" cy="33" rx="4" ry="5" fill="#cc2200"/>
-                <ellipse cx="64" cy="33" rx="4" ry="5" fill="#cc2200"/>
-                <!-- terceiro olho (Mega) -->
-                <ellipse cx="50" cy="20" rx="5" ry="5" fill="#f5c518" opacity=".95"/>
-                <ellipse cx="50" cy="20" rx="2.5" ry="2.5" fill="white"/>
-                <!-- sorriso -->
-                <path d="M36 50 Q50 62 64 50" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                <!-- dentes -->
-                <rect x="43" y="52" width="5" height="6" rx="1" fill="white"/>
-                <rect x="52" y="52" width="5" height="6" rx="1" fill="white"/>
-                <!-- chifres Mega -->
-                <path d="M28 18 L22 4 L34 14" fill="#9b59f5"/>
-                <path d="M72 18 L78 4 L66 14" fill="#9b59f5"/>
-                <!-- aura -->
-                <ellipse cx="50" cy="50" rx="46" ry="46" stroke="#7c3aed" stroke-width="1.5" fill="none" opacity=".25"/>
-              </svg>
-              <span style="font-family:'DM Serif Display',serif;font-size:.85rem;color:rgba(255,255,255,.75);letter-spacing:.05em;">Mega Gengar ex</span>
-              <span style="font-size:.6rem;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase;">284/217 · SIR</span>
+            <div id="gengar-fallback" style="display:none;position:absolute;inset:0;flex-direction:column;align-items:center;justify-content:center;background:rgba(0,0,0,.35);gap:.4rem;">
+              <span style="font-size:2.8rem;opacity:.7;">👻</span>
+              <span style="font-family:'DM Serif Display',serif;font-size:.78rem;color:rgba(255,255,255,.55);letter-spacing:.04em;text-align:center;padding:0 6px;">Mega Gengar ex</span>
             </div>
             <span class="zoom-hint">🔍 Ampliar</span>
             <span class="feat-rarity">Special Illus. Rare</span>
@@ -1236,7 +1211,7 @@ function driFallback(img) {
   if (!m) { img.style.display='none'; if(img.nextElementSibling) img.nextElementSibling.style.display='flex'; return; }
   const prefix=m[1], baseId=parseInt(m[2]), suffix=m[3];
   const step=Math.ceil(img._driTry/2), offset=img._driTry%2===1?step:-step;
-  if (step<=150) { img.src=`https://den-cards.pokellector.com/412/${prefix}${baseId+offset}${suffix}`; }
+  if (step<=10) { img.src=`https://den-cards.pokellector.com/412/${prefix}${baseId+offset}${suffix}`; }
   else { img.style.display='none'; const fb=img.nextElementSibling; if(fb&&fb.tagName!=='SPAN') fb.style.display='flex'; }
 }
 /* ── MEP Tyrunt #70 — scan proativo de IDs via Image() ── */
@@ -1289,7 +1264,7 @@ function preFallback(img) {
   const prefix = m[1], baseId = parseInt(m[2]), suffix = m[3];
   const step = Math.ceil(img._preTry / 2);
   const offset = img._preTry % 2 === 1 ? step : -step;
-  if (step <= 150) {
+  if (step <= 10) {
     img.src = `https://den-cards.pokellector.com/407/${prefix}${baseId + offset}${suffix}`;
   } else {
     img.style.display = 'none';
@@ -1308,7 +1283,7 @@ function porFallback(img) {
   const prefix = m[1], baseId = parseInt(m[2]), suffix = m[3];
   const step = Math.ceil(img._porTry / 2);
   const offset = img._porTry % 2 === 1 ? step : -step;
-  if (step <= 150) {
+  if (step <= 10) {
     img.src = `https://den-cards.pokellector.com/429/${prefix}${baseId + offset}${suffix}`;
   } else {
     img.style.display = 'none';
@@ -1328,7 +1303,7 @@ function ascFallback(img) {
   // Varre: +1,-1,+2,-2,...,+150,-150
   const step = Math.ceil(img._ascTry / 2);
   const offset = img._ascTry % 2 === 1 ? step : -step;
-  if (step <= 150) {
+  if (step <= 10) {
     img.src = `https://den-cards.pokellector.com/426/${prefix}${baseId + offset}${suffix}`;
   } else {
     img.style.display = 'none';
