@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -2010,7 +2010,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 </body>
-</html>## Hi there 👋
+
 
 <!--
 **kustelinha21/kustelinha21** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
