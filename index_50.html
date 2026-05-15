@@ -27,7 +27,7 @@ button{font-family:inherit;}
   --bg-card2:#1e4068;
 }
 body{font-family:'DM Sans',sans-serif;background:var(--bg-page);color:var(--black);line-height:1.6;-webkit-font-smoothing:antialiased;}
-.container{max-width:1120px;margin:0 auto;padding:0 1.5rem;}
+.container{max-width:1120px;margin:0 auto;padding:0 1.5rem;width:100%;min-width:0;}
 .label{font-size:var(--fs-xs);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
 .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin-bottom:2.5rem;padding-bottom:1rem;border-bottom:1px solid var(--border);}
 .sec-head h2{font-family:'DM Serif Display',serif;font-size:var(--fs-lg);font-weight:400;line-height:1.2;}
@@ -133,13 +133,13 @@ nav{position:sticky;top:0;z-index:60;background:var(--blue);border-bottom:3px so
 .feat-bg::after{bottom:-10px;right:-20px;}
 .featured-cards .container{position:relative;z-index:1;}
 /* ── CARROSSEL ── */
-.carousel-sec{padding:2.5rem 0 2rem;background:linear-gradient(180deg,#0a0a1a 0%,#0d1428 100%);}
+.carousel-sec{padding:2.5rem 0 2rem;background:linear-gradient(180deg,#0a0a1a 0%,#0d1428 100%);overflow:hidden;}
 .carousel-head{text-align:center;margin-bottom:1.5rem;}
 .carousel-head .label{color:rgba(255,255,255,.4);margin-bottom:.4rem;display:block;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;}
 .carousel-head h2{font-family:'DM Serif Display',serif;font-size:1.6rem;font-weight:400;color:#fff;line-height:1.2;}
 .carousel-head h2 em{font-style:italic;color:var(--yellow);}
-.carousel-wrap{position:relative;display:flex;align-items:center;gap:.5rem;}
-.carousel-track{display:flex;gap:.75rem;overflow-x:auto;scroll-behavior:smooth;padding:.75rem .25rem;flex:1;
+.carousel-wrap{position:relative;display:flex;align-items:center;gap:.5rem;min-width:0;width:100%;max-width:100%;}
+.carousel-track{display:flex;gap:.75rem;overflow-x:auto;scroll-behavior:smooth;padding:.75rem .25rem;flex:1;min-width:0;max-width:100%;
   scrollbar-width:thin;scrollbar-color:rgba(255,215,0,.3) transparent;cursor:grab;}
 .carousel-track:active{cursor:grabbing;}
 .carousel-track::-webkit-scrollbar{height:4px;}
@@ -161,9 +161,9 @@ nav{position:sticky;top:0;z-index:60;background:var(--blue);border-bottom:3px so
   line-height:1;padding:0;}
 .carousel-btn:hover{background:rgba(255,215,0,.15);border-color:#ffd700;}
 /* ── CARROSSEL ABA DE CARTAS ── */
-.ctk-section{margin-bottom:2rem;}
-.ctk-wrap{display:flex;align-items:center;gap:.4rem;margin-top:1rem;}
-.ctk-track{display:flex;gap:.6rem;overflow-x:auto;scroll-behavior:smooth;padding:.6rem .2rem;flex:1;
+.ctk-section{margin-bottom:2rem;max-width:100%;box-sizing:border-box;}
+.ctk-wrap{display:flex;align-items:center;gap:.4rem;margin-top:1rem;min-width:0;width:100%;max-width:100%;}
+.ctk-track{display:flex;gap:.6rem;overflow-x:auto;scroll-behavior:smooth;padding:.6rem .2rem;flex:1;min-width:0;max-width:100%;
   scrollbar-width:thin;scrollbar-color:rgba(255,215,0,.25) transparent;cursor:grab;}
 .ctk-track::-webkit-scrollbar{height:3px;}
 .ctk-track::-webkit-scrollbar-thumb{background:rgba(255,215,0,.25);border-radius:2px;}
@@ -302,7 +302,7 @@ nav{position:sticky;top:0;z-index:60;background:var(--blue);border-bottom:3px so
 .rar-price small{display:block;font-family:'DM Sans',sans-serif;font-size:var(--fs-xs);color:var(--muted);}
 
 /* ─── CARTAS ─── */
-.cards-sec{padding:var(--sec) 0;border-bottom:1px solid var(--border);}
+.cards-sec{padding:var(--sec) 0;border-bottom:1px solid var(--border);overflow:hidden;}
 
 /* toolbar de ordenação */
 .cards-toolbar{
@@ -458,7 +458,10 @@ footer{border-top:2px solid var(--yellow);background:var(--blue-dk);padding:2rem
 /* ─── RESPONSIVE ─── */
 
 /* impede scroll horizontal em qualquer tela */
-html,body{overflow-x:hidden;max-width:100%;}
+html{overflow-x:hidden;}
+body{overflow-x:hidden;max-width:100%;}
+/* todas as sections contêm overflow horizontal */
+section,nav,footer,.container{box-sizing:border-box;max-width:100%;}
 
 @media(max-width:960px){
   .hero-grid,.about-grid,.loc-grid{grid-template-columns:1fr;gap:2rem;}
@@ -667,9 +670,44 @@ html,body{overflow-x:hidden;max-width:100%;}
         </div>
         <div class="hero-visual">
           <div class="card-showcase" style="display:flex;align-items:center;justify-content:center;min-height:130px;">
-            <img src="kustelinha_logo.svg" alt="Kustelinha TCG"
-              style="width:100%;max-width:460px;filter:drop-shadow(0 0 22px rgba(255,215,0,.45));"
-              onerror="this.style.display='none'">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 150" style="width:100%;max-width:460px;display:block;filter:drop-shadow(0 0 22px rgba(255,215,0,.45));">
+              <defs>
+                <linearGradient id="hg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fff0a0"/><stop offset="30%" stop-color="#ffd700"/><stop offset="70%" stop-color="#ffaa00"/><stop offset="100%" stop-color="#e6890a"/></linearGradient>
+                <linearGradient id="htcg" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#a855f7"/><stop offset="100%" stop-color="#ec4899"/></linearGradient>
+                <linearGradient id="hbr" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0%" stop-color="#ff6666"/><stop offset="100%" stop-color="#bb0000"/></linearGradient>
+                <linearGradient id="hbw" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#cccccc"/></linearGradient>
+                <filter id="hgg" x="-5%" y="-20%" width="110%" height="140%"><feGaussianBlur in="SourceGraphic" stdDeviation="4" result="b"/><feColorMatrix in="b" type="matrix" values="1 0.8 0 0 0 0.6 0.5 0 0 0 0 0 0 0 0 0 0 0 0.8 0" result="g"/><feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                <clipPath id="hbc"><circle cx="75" cy="75" r="55"/></clipPath>
+              </defs>
+              <!-- Pokeball -->
+              <circle cx="75" cy="75" r="58" fill="#1a1a2e"/>
+              <circle cx="75" cy="75" r="55" fill="#111122"/>
+              <path d="M20,75 A55,55 0 0,1 130,75 Z" fill="url(#hbr)" clip-path="url(#hbc)"/>
+              <path d="M20,75 A55,55 0 0,0 130,75 Z" fill="url(#hbw)" clip-path="url(#hbc)"/>
+              <rect x="20" y="68" width="110" height="14" fill="#111" clip-path="url(#hbc)"/>
+              <circle cx="75" cy="75" r="55" fill="none" stroke="#222" stroke-width="2.5"/>
+              <circle cx="75" cy="75" r="18" fill="#1a1a1a" stroke="#0a0a0a" stroke-width="2"/>
+              <circle cx="75" cy="75" r="12" fill="white"/>
+              <circle cx="75" cy="75" r="9" fill="#f8f8f8" stroke="#ddd" stroke-width="1"/>
+              <circle cx="71" cy="71" r="3.5" fill="white" opacity="0.8"/>
+              <path d="M42,38 Q58,26 76,32" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.45"/>
+              <circle cx="75" cy="75" r="58" fill="none" stroke="#ffd700" stroke-width="2" opacity="0.35" stroke-dasharray="8 4"/>
+              <!-- Stars -->
+              <circle cx="410" cy="14" r="2.5" fill="#ffd700" opacity="0.6"/>
+              <circle cx="475" cy="18" r="1.5" fill="#ffd700" opacity="0.5"/>
+              <circle cx="555" cy="35" r="2" fill="#ffd700" opacity="0.4"/>
+              <circle cx="548" cy="120" r="2" fill="#ffd700" opacity="0.4"/>
+              <path d="M490,22 L492,29 L494,22 L492,15 Z" fill="#ffd700" opacity="0.7"/>
+              <path d="M488,22 L495,24 L488,26 L481,24 Z" fill="#ffd700" opacity="0.5"/>
+              <!-- Kustelinha text -->
+              <text x="152" y="88" font-family="'Arial Black','Helvetica Neue',Impact,Arial,sans-serif" font-size="56" font-weight="900" fill="url(#hg)" filter="url(#hgg)" letter-spacing="-2">Kustelinha</text>
+              <!-- TCG badge -->
+              <rect x="152" y="98" width="72" height="28" rx="6" fill="url(#htcg)"/>
+              <text x="188" y="118" font-family="'Arial Black',Impact,Arial,sans-serif" font-size="15" font-weight="900" fill="white" text-anchor="middle" letter-spacing="4">TCG</text>
+              <!-- Subtitle -->
+              <text x="234" y="116" font-family="Arial,Helvetica,sans-serif" font-size="11.5" fill="rgba(255,255,255,0.42)" letter-spacing="2">CARTAS POKÉMON · CATANDUVA SP</text>
+              <line x1="152" y1="93" x2="570" y2="93" stroke="url(#hg)" stroke-width="1.5" opacity="0.2"/>
+            </svg>
           </div>
           <div class="hero-stats">
             <div class="h-stat"><span class="h-stat-num" id="stat-cards">–</span><span class="h-stat-lbl">Cartas no site</span></div>
