@@ -1,0 +1,101 @@
+﻿[
+    {
+        "id":  20181,
+        "code":  "EGY",
+        "player":  "Hamdy Fathy",
+        "type":  "jpeg",
+        "b64":  null,
+        "url":  "https://upload.wikimedia.org/wikipedia/commons/4/4d/Hamdy_Fathy_2.jpg",
+        "num":  12
+    },
+    {
+        "id":  20182,
+        "code":  "EGY",
+        "player":  "Mohamed Salah",
+        "type":  "jpeg",
+        "b64":  null,
+        "url":  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Mohamed_Salah_2018.jpg/400px-Mohamed_Salah_2018.jpg",
+        "num":  17
+    },
+    {
+        "id":  20184,
+        "code":  "TUR",
+        "player":  "Caglar Soyuncu",
+        "type":  "jpeg",
+        "b64":  null,
+        "url":  "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/AUT_vs._TUR_2016-03-29_%28381%29_%28cropped%29.jpg/400px-AUT_vs._TUR_2016-03-29_%28381%29_%28cropped%29.jpg",
+        "num":  6
+    },
+    {
+        "id":  20185,
+        "code":  "TUR",
+        "player":  "Ugurcan Cakir",
+        "type":  "png",
+        "b64":  null,
+        "url":  "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/U%C4%9Furcan_%C3%87ak%C4%B1r_-_beIN-Sports-Reklam_%282021%29_%28cropped%29.png/400px-U%C4%9Furcan_%C3%87ak%C4%B1r_-_beIN-Sports-Reklam_%282021%29_%28cropped%29.png",
+        "num":  2
+    },
+    {
+        "id":  20186,
+        "code":  "TUR",
+        "player":  "Irfan Can Kahveci",
+        "type":  "jpeg",
+        "b64":  null,
+        "url":  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Rus-Turkey_%285%29.jpg/400px-Rus-Turkey_%285%29.jpg",
+        "num":  15
+    },
+    {
+        "id":  20187,
+        "code":  "ENG",
+        "player":  "Anthony Gordon",
+        "type":  "jpeg",
+        "b64":  null,
+        "url":  "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Gordon_in_2024_%28cropped%29.jpg/400px-Gordon_in_2024_%28cropped%29.jpg",
+        "num":  15
+    },
+    {
+        "id":  20188,
+        "code":  "ENG",
+        "player":  "Jordan Pickford",
+        "type":  "jpeg",
+        "b64":  null,
+        "url":  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Jordan_Pickford_2022-07-16_1.jpg/400px-Jordan_Pickford_2022-07-16_1.jpg",
+        "num":  2
+    },
+    {
+        "id":  20189,
+        "code":  "ENG",
+        "player":  "Trent Alexander-Arnold",
+        "type":  "jpeg",
+        "b64":  null,
+        "url":  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Trent_Alexander-Arnold_2018_%28cropped%29.jpg/400px-Trent_Alexander-Arnold_2018_%28cropped%29.jpg",
+        "num":  6
+    },
+    {
+        "id":  20190,
+        "code":  "ENG",
+        "player":  "Marcus Rashford",
+        "type":  "jpeg",
+        "b64":  null,
+        "url":  "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Marcus_Rashford_in_2023.jpg/400px-Marcus_Rashford_in_2023.jpg",
+        "num":  19
+    },
+    {
+        "id":  20192,
+        "code":  "CPV",
+        "player":  "Jamiro Monteiro",
+        "type":  "jpeg",
+        "b64":  null,
+        "url":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Jamiro_Monteiro_Philadelphia_Union_2019.jpg/400px-Jamiro_Monteiro_Philadelphia_Union_2019.jpg",
+        "num":  12
+    },
+    {
+        "id":  20193,
+        "code":  "CPV",
+        "player":  "Ryan Mendes",
+        "type":  "jpeg",
+        "b64":  null,
+        "url":  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Ryan_Mendes_%28LOSC_Lille%29.JPG/400px-Ryan_Mendes_%28LOSC_Lille%29.JPG",
+        "num":  17
+    }
+]
