@@ -1,0 +1,12 @@
+﻿<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Teste JS</title></head><body>
+<button onclick="showTab('cartas',this)">Cartas</button>
+<button onclick="showTab('figurinhas',this)">Figurinhas</button>
+<div id="tab-cartas" class="tab-section" style="display:none">CARTAS OK</div>
+<div id="tab-figurinhas" class="tab-section" style="display:none">FIGURINHAS OK</div>
+<script>
+function showTab(id,btn){
+  document.querySelectorAll('.tab-section').forEach(s=>s.style.display='none');
+  var el=document.getElementById('tab-'+id);
+  if(el) el.style.display='block';
+}
+</script></body></html>
