@@ -2563,9 +2563,9 @@ const CARDS_DATA = [
 ];
 
 const RARITY_COLORS = { hr:'#ffd700', sr:'#c9a000', ur:'#a855f7', ir:'#f59e0b', rr:'#7c3aed', r:'#1a6db5', u:'#28a062', c:'#4a6a7a', cu:'#3d8a6a', promo:'#ff6b35' };
-const RARITY_LABELS = { hr:'Rara Hiper (Gold)', sr:'Ilustração Rara Especial', ur:'Rara Ultra (Full Art)', ir:'Ilustração Rara', rr:'Raras Duplas', r:'Raro', u:'Incomum', c:'Comum', cu:'Comum / Incomum', promo:'Cartas Promo' };
-const RARITY_ORDER  = ['hr','sr','ur','ir','rr','r','cu','promo'];
-function rarityFilter(data, r){ if(r==='cu') return data.filter(c=>c.rarity==='c'||c.rarity==='u'); if(r==='promo') return data.filter(c=>c.promo===true); return data.filter(c=>c.rarity===r&&!c.promo); }
+const RARITY_LABELS = { hr:'Rara Hiper (Gold)', sr:'Ilustração Rara Especial', ur:'Rara Ultra (Full Art)', ir:'Ilustração Rara', rr:'Raras Duplas', r:'Raro', u:'Incomum', c:'Comum', cu:'Comum / Incomum / Raro / Raras Duplas', promo:'Cartas Promo' };
+const RARITY_ORDER  = ['hr','sr','ur','ir','cu','promo'];
+function rarityFilter(data, r){ if(r==='cu') return data.filter(c=>['c','u','r','rr'].includes(c.rarity)&&!c.promo); if(r==='promo') return data.filter(c=>c.promo===true); return data.filter(c=>c.rarity===r&&!c.promo); }
 
 function getCardNum(c){
   const m = (c.detail || '').match(/^(\d+)/);
